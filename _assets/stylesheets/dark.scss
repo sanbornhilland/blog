@@ -62,6 +62,7 @@ $article-paginator-color-hover: $gray-lightest;
 
 // Modules
 
+@import "modules/links";
 @import "modules/about";
 @import "modules/articles";
 @import "modules/embed";
