@@ -6,8 +6,14 @@
   h1 {
     margin: 40px 0 15px;
   }
+}
 
-  .about-image {
-  	padding-top: 50px;
-  }
+.about-image {
+	padding-top: 50px;
+}
+
+.about-image-credit,
+.about-image-credit a {
+	text-align: right;
+	color: $gray-light;
 }
