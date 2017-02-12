@@ -26,6 +26,7 @@ social:
 # Important settings (change at own risk)
 
 assets:
+  prefix: /blog
   compress:
     css: true
     js: true
