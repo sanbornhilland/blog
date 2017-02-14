@@ -3,9 +3,9 @@
 name: Sanborn Hilland 
 paginate: 25
 paginate_path: "/posts/page/:num/"
-url: https://sanbornhilland.github.io
+url: http://www.sanbornhilland.com
 blog_theme: light # Or use dark
-baseurl: /blog
+baseurl: /
 
 # Optional settings
 
