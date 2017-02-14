@@ -5,7 +5,7 @@ paginate: 25
 paginate_path: "/posts/page/:num/"
 url: https://sanbornhilland.github.io
 blog_theme: light # Or use dark
-baseurl: /blog
+baseurl: /
 
 # Optional settings
 
