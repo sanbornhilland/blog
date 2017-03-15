@@ -1,9 +1,9 @@
 <nav class="header-nav reveal">
-  <a href="{{ '/' | relative_url }}" class="header-logo" title="{{ site.name }}">{{ site.name }}</a>
+  <a href="{{ '/' }}" class="header-logo" title="{{ site.name }}">{{ site.name }}</a>
   <ul class="header-links">
     {% if site.about_enabled == true %}
       <li>
-        <a href="{{ 'about' | relative_url }}" title="About me">
+        <a href="{{ '/about' }}" title="About me">
           <span class="icon icon-android-person"></span>
         </a>
       </li>
@@ -66,13 +66,13 @@
     {% endif %}
     {% if site.rss_enabled == true %}
       <li>
-        <a href="{{ 'feed.xml' | relative_url }}" target="_blank" title="RSS">
+        <a href="{{ 'feed.xml' }}" target="_blank" title="RSS">
           <span class="icon icon-social-rss"></span>
         </a>
       </li>
     {% endif %}
     <li>
-      <a href="{{ 'links' | relative_url }}" title="Links">
+      <a href="{{ '/links' }}" title="Links">
         <span class="icon icon-link"></span>
       </a>
     </li>
