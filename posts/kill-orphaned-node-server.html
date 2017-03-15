@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sanborn Hilland | Find and kill an orphaned node server</title>
+  <meta name="description" content="Hunt down and kill an orphaned node server. Kill it with fire.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Find and kill an orphaned node server">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.sanbornhilland.com//posts/kill-orphaned-node-server">
+  <meta property="og:description" content="Hunt down and kill an orphaned node server. Kill it with fire.">
+  <meta property="og:site_name" content="Sanborn Hilland">
+  <meta property="og:image" content="http://www.sanbornhilland.com/blog/og-image.jpg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://www.sanbornhilland.com//posts/kill-orphaned-node-server">
+  <meta name="twitter:title" content="Find and kill an orphaned node server">
+  <meta name="twitter:description" content="Hunt down and kill an orphaned node server. Kill it with fire.">
+  <meta name="twitter:image" content="http://www.sanbornhilland.com/blog/og-image.jpg">
+
+  <link rel="apple-touch-icon" href="/blog/apple-touch-icon.png">
+  <link href="http://www.sanbornhilland.com//feed.xml" type="application/rss+xml" rel="alternate" title="Sanborn Hilland Last 10 blog posts" />
+
+  
+    <link type="text/css" rel="stylesheet" href="/blog/light.css">
+  
+</head>
+
+<body>
+  <main role="main">
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav reveal">
+  <a href="/" class="header-logo" title="Sanborn Hilland">Sanborn Hilland</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <span class="icon icon-android-person"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/sanbornhilland" target="_blank" title="GitHub">
+          <span class="icon icon-social-github"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/sanborn-hilland-7889847a" target="_blank" title="LinkedIn">
+          <span class="icon icon-social-linkedin"></span>
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="feed.xml" target="_blank" title="RSS">
+          <span class="icon icon-social-rss"></span>
+        </a>
+      </li>
+    
+    <li>
+      <a href="/links" title="Links">
+        <span class="icon icon-link"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+        <article class="article reveal">
+          <header class="article-header">
+            <h1>Find and kill an orphaned node server</h1>
+            <p>Hunt down and kill an orphaned node server. Kill it with fire.</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                January 13, 2017
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  1 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/node">node</a>
+                
+                  <a href="/tag/npm">npm</a>
+                
+                  <a href="/tag/reminder">reminder</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>I recently ran into an issue where I was using an <code class="highlighter-rouge">npm</code> script to start an instance of a node <a href="https://github.com/indexzero/http-server">http-server</a>. Unfortunately the script was erroring out without killing the server. After running the script several times I had a number of servers running on various ports that were just running in the background. If you run into a simple scenario, you can find them and kill them like this:</p>
+
+<p>I knew I had an instance running on port <code class="highlighter-rouge">8082</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ lsof -i tcp:8082
+
+COMMAND   PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    50568 sanbornh   13u  IPv4 0x7adae33acae706b1      0t0  TCP *:sunproxyadmin (LISTEN)
+</code></pre>
+</div>
+
+<p>Now you can simply kill the server based on its <code class="highlighter-rouge">PID</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ kill 50568
+
+http-server stopped.
+</code></pre>
+</div>
+
+          </div>
+
+          <div class="article-share">
+            
+            <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status=Find and kill an orphaned node server - http://www.sanbornhilland.com//posts/kill-orphaned-node-server ', 'newwindow', 'width=500, height=225'); return false;">
+              <span class="icon icon-social-twitter"></span>
+            </a>
+            <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.sanbornhilland.com//posts/kill-orphaned-node-server', 'newwindow', 'width=500, height=500'); return false;">
+              <span class="icon icon-social-facebook"></span>
+            </a>
+            <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=http://www.sanbornhilland.com//posts/kill-orphaned-node-server', 'newwindow', 'width=550, height=400'); return false;">
+              <span class="icon icon-social-googleplus"></span>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer reveal">
+  <p></p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="/blog/vendor.js"></script>
+<script type="text/javascript" src="/blog/application.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cormorant Garamond:700', 'Lato:300,400,700']
+    }
+  });
+</script>
+
+
+  <script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-91927046-1','auto');ga('send','pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+</body>
+</html>
